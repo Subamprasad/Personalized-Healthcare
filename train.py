@@ -18,14 +18,16 @@ stress_levels = np.random.randint(1, 11, n_samples)
 # Simple rules for recommendations
 classes = []
 for i in range(n_samples):
-    if bmis[i] > 30 and exercise_hours[i] < 3:
+    if bmis[i] >= 30:
         classes.append('Weight Management & Cardio Plan')
-    elif stress_levels[i] > 7 and sleep_hours[i] < 6:
+    elif bmis[i] >= 25 and exercise_hours[i] < 3:
+        classes.append('Weight Management & Cardio Plan')
+    elif stress_levels[i] >= 7 or sleep_hours[i] <= 6:
         classes.append('Stress Reduction & Sleep Therapy Plan')
-    elif exercise_hours[i] > 7 and bmis[i] < 25:
-        classes.append('High Performance & Nutrition Maintenance')
-    elif ages[i] > 60:
+    elif ages[i] >= 60:
         classes.append('Senior Wellness & Joint Care Plan')
+    elif exercise_hours[i] >= 4 and 18.5 <= bmis[i] < 25:
+        classes.append('High Performance & Nutrition Maintenance')
     else:
         classes.append('General Balanced Health Routine')
 
