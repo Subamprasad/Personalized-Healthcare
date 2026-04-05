@@ -1,0 +1,15 @@
+[build]
+  # Tell Netlify that the React app is inside the healthcare-app folder
+  base = "healthcare-app"
+  
+  # The command Netlify must run to build the app
+  command = "npm run build"
+  
+  # The folder Vite creates for the final optimized website
+  publish = "dist"
+
+# Ensure all routes fall back to index.html (useful for React State/Routing)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
