@@ -2,6 +2,8 @@
 
 Welcome to the **Personalized Healthcare AI** system! This project leverages **Machine Learning** to help you understand your core health metrics and provides you with dynamic, actionable advice to help you get active, stay fit, and reduce overall stress. 
 
+**🌐 Check out the Live App:** [https://personalized-healthcare.netlify.app/](https://personalized-healthcare.netlify.app/)
+
 ## 🌟 How It Works
 
 Instead of providing generic medical advice, this application acts as your data-driven health advisor:
@@ -39,9 +41,6 @@ Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
    npm run dev
    ```
 5. Click on the `http://localhost:5173/` link generated in your terminal to view the app!
-
-## 🌍 Deployment to Netlify
-Because the Machine Learning model is baked directly into the frontend infrastructure, this app is incredibly cheap and easy to host! By simply running `npm run build` inside the `healthcare-app/` directory, you can drag-and-drop the resulting static `dist/` folder directly onto **Netlify**, **Vercel**, or **GitHub Pages**.
 
 ---
 *Take control of your health with data. Start your fitness journey today!* 💪
